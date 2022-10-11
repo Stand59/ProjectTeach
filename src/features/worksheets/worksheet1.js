@@ -1,5 +1,6 @@
 import { WORKSHEET1 } from "../../app/shared/WORKSHEET1.js";
 import { Row, Col} from 'reactstrap';
+import Worksheet1Content from "./worksheet1Content.js";
 
 
 const WorksheetOne = () => {
@@ -9,7 +10,7 @@ const WorksheetOne = () => {
                 return (
                     <Col md='5' className='m-4' key={ws1.id}>
                         <Row>
-                            {ws1.paragraph1}
+                            <Worksheet1Content ws1={ws1}/>
                         </Row>
                     </Col>
                 );
