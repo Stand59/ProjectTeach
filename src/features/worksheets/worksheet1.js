@@ -1,20 +1,20 @@
-import { WORKSHEET1 } from "../../app/shared/WORKSHEET1.js";
+import { WORKSHEETS } from "../../app/shared/WORKSHEETS.js";
 import { Row, Col} from 'reactstrap';
 import Worksheet1Content from "./worksheet1Content.js";
 
 
 const WorksheetOne = () => {
+    const selected = WORKSHEETS.find(obj => {
+        return obj.id === 0;
+      });
+      
     return(
         <Row>
-            {WORKSHEET1.map((ws1) => {
-                return (
-                    <Col md='5' className='m-4' key={ws1.id}>
-                        <Row>
-                            <Worksheet1Content ws1={ws1}/>
-                        </Row>
-                    </Col>
-                );
-            })}
+            <Col md='5' className='m-4' key={selected.id}>
+                <Row>
+                    <Worksheet1Content ws1={selected}/>
+                </Row>
+            </Col>
         </Row>
     );
 }

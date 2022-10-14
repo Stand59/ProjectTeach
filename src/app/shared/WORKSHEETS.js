@@ -1,6 +1,6 @@
 import reactLakeImg from '../assets/img/react-lake.jpg';
 
-export const WORKSHEET1 = [
+export const WORKSHEETS = [
     {
         id: 0,
         name: 'Prokaryotic Cells',
